@@ -1,6 +1,7 @@
 # hoth4-api-workshop
 API workshop at Hack on the Hill
 
+Slides: [link here]()
 The final product: [https://uclaacm.github.io/hoth4-api-workshop/](https://uclaacm.github.io/hoth4-api-workshop/)
 
 ```javascript
