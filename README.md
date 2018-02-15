@@ -1,7 +1,7 @@
 # hoth4-api-workshop
 API workshop at Hack on the Hill
 
-Slides: [link here]()
+Slides: [link here](https://docs.google.com/presentation/d/1YEgcMFwmaE4JY3IDK3QxzQHgyrVeyOmiA6DKoMgxDP0/edit?usp=sharing)
 
 The final product: [https://uclaacm.github.io/hoth4-api-workshop/](https://uclaacm.github.io/hoth4-api-workshop/)
 
