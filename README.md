@@ -5,7 +5,7 @@ Slides: [link here](https://docs.google.com/presentation/d/1YEgcMFwmaE4JY3IDK3Qx
 
 The final product: [https://uclaacm.github.io/hoth4-api-workshop/](https://uclaacm.github.io/hoth4-api-workshop/)
 
-```javascript
+```html
 <!DOCTYPE html>
 <script>
 async function getMemes() {
@@ -19,7 +19,7 @@ getMemes();
 ```
 
 Demo Part II
-```javascript
+```html
 <!DOCTYPE html>
 <script>
 async function getMemes() {
