@@ -1,13 +1,13 @@
 # hoth4-api-workshop
 API workshop at Hack on the Hill
 
-Slides: [link here](https://docs.google.com/presentation/d/1YEgcMFwmaE4JY3IDK3QxzQHgyrVeyOmiA6DKoMgxDP0/edit?usp=sharing)
+Slides: [link](https://docs.google.com/presentation/d/1YEgcMFwmaE4JY3IDK3QxzQHgyrVeyOmiA6DKoMgxDP0/edit?usp=sharing)
 
 The final product: [https://uclaacm.github.io/hoth4-api-workshop/](https://uclaacm.github.io/hoth4-api-workshop/)
 
-##Demo Part I
+## Demo Part I
 
-In this part, we are going to use an API provided by this workshop. This API offers the endpoint https://api.hoth4.timothygu.me/memes, which will return text that looks like this:
+In this part, we are going to use an API provided by this workshop. This API offers the endpoint https://api.hoth4.timothygu.me/memes, which will return a response that contains text in JSON (JavaScript Object Notation). This looks something like:
 ```
 [
   {
@@ -29,7 +29,6 @@ In this part, we are going to use an API provided by this workshop. This API off
   ... more memes here ...
  ]
 ```
-This format is called JSON (JavaScript Object Notation). 
 
 Notice that each meme object has these three properties:
 
@@ -44,8 +43,8 @@ The following function goes to the endpoint https://api.hoth4.timothygu.me/memes
 ```html
 <!DOCTYPE html>
 <script>
-// async means that this function is taken out of the main program flow
-// this allows you to use await
+// async means that this function is taken out of the main program flow and the browser can do other functions while this is running
+// async allows you to use await
 async function getMemes() {
   // await makes sure that response is filled before continuing
   const response = await fetch('https://api.hoth4.timothygu.me/memes');
@@ -57,9 +56,9 @@ getMemes();
 </script>
 ```
 
-Put this code into your index.html file. Open index.html with your browser and right-click -> "Inspect element" so you can view the console. You should see the array of meme objects that we printed when we called the function. 
+Put the above code into your index.html file. Open index.html with your browser and right-click -> "Inspect element" so you can view the console. You should see the array of meme objects that we printed when we called the function. 
 
-##Demo Part II
+## Demo Part II
 
 Now we're going to use another API from Google Maps in order to put all the memes we just got onto a map. 
 
