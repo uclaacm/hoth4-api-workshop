@@ -7,11 +7,13 @@ The final product: [https://uclaacm.github.io/hoth4-api-workshop/](https://uclaa
 
 Demo Part I
 
-In this part, we are going to use an API provided by this workshop. This API offers the url https://api.hoth4.timothygu.me/memes, which will give you back an array of memes. Each meme object has these properties:
+In this part, we are going to use an API provided by this workshop. This API offers the url https://api.hoth4.timothygu.me/memes, which will give you back an array of memes. 
 
-image (image url)
-fb (Facebook url)
-position (an object containing the longitude and latitude coordinates)
+Each meme object has these properties:
+
+* image (image url)
+* fb (Facebook url)
+* position (an object containing the longitude and latitude coordinates)
 
 We're going to use these properties later on in the demo. 
 
@@ -75,6 +77,7 @@ async function initMap() {
         }
       }
     });
+    // When you click on the marker, you'll go to the Facebook link of the meme
     marker.addListener('click', () => {
       window.open(meme.fb);
     });
