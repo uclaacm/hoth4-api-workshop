@@ -3,12 +3,13 @@ API workshop at Hack on the Hill
 
 Slides: [link](https://docs.google.com/presentation/d/1YEgcMFwmaE4JY3IDK3QxzQHgyrVeyOmiA6DKoMgxDP0/edit?usp=sharing)
 
-The final product: [https://uclaacm.github.io/hoth4-api-workshop/](https://uclaacm.github.io/hoth4-api-workshop/)
+The final product: https://uclaacm.github.io/hoth4-api-workshop/
 
 ## Demo Part I
 
 In this part, we are going to use an API provided by this workshop. This API offers the endpoint https://api.hoth4.timothygu.me/memes, which will return a response that contains text in JSON (JavaScript Object Notation). This looks something like:
-```
+
+```js
 [
   {
     "image": "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/27656971_1644569528954328_458318846514208241_n.jpg?oh=eb48e7f9c9317aa99092ab59e372ccbb&oe=5B1CD4F0",
@@ -25,16 +26,16 @@ In this part, we are going to use an API provided by this workshop. This API off
       "lat": 34.07286,
       "lng": -118.449968
     }
-  }
+  },
   ... more memes here ...
- ]
+]
 ```
 
 Notice that each meme object has these three properties:
 
-* image (image url)
-* fb (Facebook url)
-* position (an object containing the longitude and latitude coordinates)
+* `image` (image URL)
+* `fb` (Facebook URL)
+* `position` (an object containing the latitude and longitude coordinates)
 
 We're going to use these properties later on in the demo.
 
@@ -43,8 +44,9 @@ The following function goes to the endpoint https://api.hoth4.timothygu.me/memes
 ```html
 <!DOCTYPE html>
 <script>
-// async means that this function is taken out of the main program flow and the browser can do other functions while this is running
-// async allows you to use await
+// async means that this function is taken out of the main program flow and the
+// browser can do other functions while this is running.
+// async allows you to use await inside the function.
 async function getMemes() {
   // await makes sure that response is filled before continuing
   const response = await fetch('https://api.hoth4.timothygu.me/memes');
@@ -63,13 +65,13 @@ Put the above code into your index.html file. Open index.html with your browser 
 Now we're going to use another API from Google Maps in order to put all the memes we just got onto a map. 
 
 Companies usually require you to have an account to get a key for their API (so they can keep track of who's using it and make sure it's not abused). 
-To get the Google Maps API key, go to: https://developers.google.com/maps/documentation/javascript/ 
-Click "Get a key", make a new project, and you should get a key. The key looks like a long string of letters and numbers. 
+To get the Google Maps API key, go to: https://developers.google.com/maps/documentation/javascript/.
+Click "Get a key", make a new project, and you should get a key. The key looks like a long string of letters, numbers, and symbols.
 
 Copy and paste the following code into your index.html file, replacing the previous code. 
 Notice that the top part is the same as before, except we don't call getMemes() until later.
 
-At the bottom, replace ```YOUR_API_KEY_HERE``` with the API key you got previously. If you're having troubles with this, use our API Key: ```AIzaSyD0AVr2hv7dSnCQtSIoyleEZ4xinq_oSFM```
+At the bottom, replace `YOUR_API_KEY_HERE` with the API key you got previously. If you're having troubles with this, use our API Key: `AIzaSyD0AVr2hv7dSnCQtSIoyleEZ4xinq_oSFM`
 
 ```html
 <!DOCTYPE html>
@@ -105,7 +107,7 @@ async function initMap() {
         }
       }
     });
-    // When you click on the marker, you'll go to the Facebook link of the meme
+    // When you click on the marker, you'll go to the Facebook link of the meme.
     marker.addListener('click', () => {
       window.open(meme.fb);
     });
